@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: ink free;
+            font-size: 25px;
+            background-color: #ddd;
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            position: relative;
+
+            #para_fin{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            }
+        }
+        .div_parent{
+            padding: 10px;
+            height: 50%;
+            width: 50%;
+            background-color: #aaa;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap:10px;
+            width: 40%;
+            border-radius: 20px;
+
+            h2{
+
+            }
+
+            input{
+                height: 10%;
+                border-radius: 5px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div_parent">
+        <h2> Factorielle</h2>
+        <input type="number" placeholder="Entrer un nombre" id="input" oninput="foncfactorielle()">
+        <div id="div1"></div>
+    </div>
+    <div> 
+        <p id="para_fin">By Riaz</p>
+    </div>
+    <script>
+        var div1 =document.getElementById("div1");
+        var bouton = document.getElementById("bouton");
+        function foncfactorielle(){
+           var input=document.getElementById("input");
+            input = +input.value;
+            if(input===0){
+                div1.textContent ="la factorielle de 0 est égale a 1";
+            }
+            else{
+                console.log(input)
+                var i =0;
+                var resultat =1;
+                for(i=0;i<input;i++){
+                    resultat = resultat*(input-i);
+                    console.log(resultat);
+                }
+                div1.innerHTML = " La factorielle de <strong>"+input+"</strong> est <strong>"+resultat+"</strong>";
+                console.log("Opération reussie");
+            }
+        }
+        var cheminfactorielle =window.location.pathname;
+        console.log(cheminfactorielle);
+    </script>
+    <script src="../script.js">
+    </script>
+
+</body>
+</html>

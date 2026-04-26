@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+  }
+
+  .avatar-svg {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Animation de clignement des yeux */
+  @keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+  }
+
+  /* Animation légère de flottement pour les cheveux */
+  @keyframes hairMove {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-1deg) translateY(-1px); }
+  }
+
+  .eye {
+    animation: blink 4s infinite;
+    transform-origin: 100px 95px; /* Centre des yeux */
+  }
+
+  .hair {
+    animation: hairMove 3s ease-in-out infinite;
+    transform-origin: top center;
+    fill: #2c3e50; /* Couleur des cheveux : Noir/Gris foncé */
+  }
+
+  /* Interaction au survol */
+  svg:hover #mouth {
+    d: path("M80,145 Q100,165 120,145"); /* Sourire plus large */
+    transition: 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+<svg class="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40,195 Q40,150 100,150 Q160,150 160,195" fill="#5DADE2" />
+  
+  <circle cx="100" cy="100" r="55" fill="#FFDBAC" />
+  
+  <path class="hair" d="M45,100 Q45,40 100,40 Q155,40 155,100 Q155,90 145,80 Q130,55 100,55 Q70,55 55,80 Q45,90 45,100" />
+  
+  <g class="eye">
+    <circle cx="80" cy="100" r="6" fill="#333" />
+    <circle cx="120" cy="100" r="6" fill="#333" />
+  </g>
+  
+  <path id="mouth" d="M85,135 Q100,145 115,135" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  
+  <path d="M97,115 Q100,120 103,115" stroke="#D4A373" fill="none" stroke-width="1.5" />
+</svg>
+
+</body>
+</html>
+

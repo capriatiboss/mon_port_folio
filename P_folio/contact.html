@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wilih=device-wilih, initial-scale=1.0">
+    <title>Port_folio</title>
+    <link rel="stylesheet" href="style_folder/style.css">
+    <link rel="stylesheet" href="style_folder/style_contact.css">
+
+    <style>
+    @keyframes upwardsWave {
+        0% { transform: translate(0, 0); opacity: 0.8; } 
+        100% { transform: translate(0, -50px) scale(1.5); opacity: 0; } 
+    }    
+    .wave-ring {
+        animation: upwardsWave 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        transform-origin: 50% 50%;
+    }
+    #wave-1 { animation-delay: 0s; }
+    #wave-2 { animation-delay: 0.6s; }
+    #wave-3 { animation-delay: 1.2s; }
+
+    .icone-container {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+              @keyframes pulseHalo {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.15); opacity: 0; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+        @keyframes subtleRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #animated-halo {
+            animation: pulseHalo 3s ease-out infinite;
+            transform-origin: 50% 50%; /* Point de rotation/scale au centre */
+        }       
+        #internal-logo {
+            animation: subtleRotate 10s linear infinite;
+            transform-origin: 50px 50px; /* Centre du viewBox 100x100 */
+        }
+
+        @keyframes pulse {
+            0% { 
+                fill: #1877F2;
+                transform: scale(1);
+            }
+            50% { 
+                fill: #2ecc71;
+                transform: scale(1.05);
+            }
+            100% { 
+                fill: #1877F2;
+                transform: scale(1);
+            }
+        }
+        #facebook-background {
+            animation: pulse 3s ease-in-out infinite; 
+            transform-origin: center; 
+        }
+
+        @keyframes glitch-shift {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(1px, 0); }
+            50% { transform: translate(-1px, 0); }
+            75% { transform: translate(0, 1px); }
+        }
+
+                /* Définition du mouvement de 'glitch' (décalage) */
+                @keyframes glitch-shift {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(1px, 0); }
+            50% { transform: translate(-1px, 0); }
+            75% { transform: translate(0, 1px); }
+        }
+
+        .tiktok-icon-base {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Glitch appliqué aux ombres colorées */
+        .tiktok-cyan {
+            animation: glitch-shift 0.4s infinite step-end alternate;
+            opacity: 0.9;
+            filter: drop-shadow(4px 0 0 #20E3E3); /* Décalage Cyan */
+        }
+        .tiktok-magenta {
+            animation: glitch-shift 0.4s infinite step-end reverse;
+            opacity: 0.9;
+            filter: drop-shadow(-4px 0 0 #FE2C55); /* Décalage Magenta */
+        }
+
+        /* Effet de rotation/mise à l'échelle au survol */
+        .tiktok-icon-base:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="fond_arriere"><div class="f_av"></div></div>
+    <div class="logo_containner"><img src="image/logo-red.png" alt="" width="50%"></div>
+         <header>
+             <nav class="nav_bar">
+                <ul class="nav_link">
+                    <li class="liste"><a href="index.html" target="_blank">Acceuil</a></li>
+                    <li class="liste"><a href="about_us/about_Riaz.html" target="_blank">À propos</a></li>
+                    <li class="liste"><a href="projet.html" target="_blank">Mes projets</a></li>
+                    <li class="liste"><a href="competence.html"target="_blank">Mes compétences</a></li>
+                    <li class="liste"> <a class="lui" href="contact.html" target="_blank">Me contacter</a></li>
+                </ul>   
+             </nav>
+         </header>
+         <main>
+                <div id="div1">
+                    <h1>Me Contacter</h1>
+                     <fieldset id="fieldset_contact">
+                        <legend><h1>Capriati Riaz DADO</h1></legend>
+                                <div id="adresse">
+                                   <div id="div3" class="info">
+                                <h2></h2>
+                                  <div id="num">                                    
+                                    <svg width="500" height="500" viewBox="0 0 250 300" fill="none" xmlns="http://www.w3.org/2000/svg">          <rect  x="60"  y="50"  width="130"  height="200"  rx="28"  fill="#1c1c1e"  stroke="#ccc"  stroke-width="1" />          <defs> <linearGradient id="screenLight" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#3498db"/> <stop offset="100%" style="stop-color:#2980b9"/> </linearGradient> </defs> <rect  x="65"  y="55"  width="120"  height="190"  rx="24"  fill="url(#screenLight)" />          <text x="125"  y="155"  font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#FFFFFF"  text-anchor="middle"  >Capriati</text> <rect  x="105"  y="55"  width="40"  height="5"   rx="2.5"  fill="#1c1c1e" /> <g transform="translate(125, 230)" stroke="#f1c40f" stroke-width="2" fill="none"> <circle id="wave-1" class="wave-ring" cx="0" cy="0" r="10" opacity="0.8"/>                <circle id="wave-2" class="wave-ring" cx="0" cy="0" r="10" opacity="0.8"/>                 <circle id="wave-3" class="wave-ring" cx="0" cy="0" r="10" opacity="0.8"/> <circle cx="0" cy="0" r="3" fill="#f1c40f"/></g></svg>
+                                        <div class="div_prez">
+                                            <div class="presentation"><span class="t-prez">Nom :</span> DADO;</div>
+                                            <div class="presentation"><span class="t-prez">Prénoms:</span> Capriati Riaz Codjo</div>
+                                            <div class="presentation">Résidence IT-DEV, Parcelle 140</div>
+                                            <div class="presentation"><span class="t-prez">Quartier: </span>Gbèdjromèdé</div>
+                                            <div class="presentation">01 BP 987, Cotonou Bénin</div>
+                                            <div class="presentation">Tel: <span id="MonNumero">0192624329</span></div>
+                                            <div class="presentation">Mail:riazsanni1@gmail.com</div>
+                                            <button style="width: 120px;" id="bouttonpourcopier">Copier mon Numero</button>
+
+                                        </div>
+                                  </div>
+                                   </div>
+                                <div id="media_sociaux" class="info">
+                                       <h2>Media Sociaux</h2>
+                                         <div id="div4">
+                                             <div class="lien">
+                                          <a href="https://www.instagram.com/riazdado?igsh=a2luNndxajNjMjhy"><svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fd5c49"/><stop offset="30%" stop-color="#fc6027"/><stop offset="60%" stop-color="#cc2587"/><stop offset="100%" stop-color="#8a3ab9"/></linearGradient></defs><rect id="animated-halo"x="0" y="0" width="100" height="100" rx="30" fill="url(#instagramGradient)" opacity="0" /><rect x="5" y="5" width="90" height="90" rx="25" fill="url(#instagramGradient)" /><g id="internal-logo"><rect  x="28"  y="28"  width="44"  height="44"  rx="12"  fill="none"  stroke="#FFFFFF"  stroke-width="5"/><circle cx="50" cy="50" r="12" fill="none" stroke="#FFFFFF" stroke-width="5"/><circle cx="70" cy="32" r="3" fill="#FFFFFF"/></g></svg></a>
+                                          <h3>Instagram</h3>
+                                             </div>
+                                             <div class="lien">
+                                        <a href="https://www.facebook.com/riaz.capriati.007" class="lien"><svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect id="facebook-background"x="5" y="5" width="90" height="90" rx="15" fill="#1877F2" /><path d="M 64.67 38.86 H 55.48 V 65.57 H 42.66 V 38.86 H 35.88 V 28.52 H 42.66 V 22.06 C 42.66 14.86 46.96 11 53.64 11 H 64.67 V 21.34 H 57.89 C 54.89 21.34 54.89 23.51 54.89 25.48 V 28.52 H 64.67 L 64.67 38.86 Z"fill="#FFFFFF"transform="translate(0, 5)" /></svg></a>
+                                        <h3>Facebook</h3>       
+                                             </div>
+                                             <div class="lien">
+                                        <a href="X.com"><svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.684l-8.026 9.423 9.445 13.197h-7.904l-6.173-8.831-7.078 8.831h-3.684l8.307-10.377-9.404-12.724h7.904l5.656 7.638zM17.51 22.04h2.25L5.783 2.91h-2.25l13.978 19.13z"/><animate attributeName="fill" values="#1A1A1A; #007bff; #0099ff; #1A1A1A" dur="4s" repeatCount="indefinite"/></svg></a>
+                                        <h3>X</h3>               
+                                             </div>
+                                             <div class="lien">
+                                        <svg aria-hidden="true" style="width: 150; height: 150; border:solid; display:none;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="tiktok-path" viewBox="0 0 24 24"><path d="M16 0.22c-.6-.08-1.2.06-1.7.38-2.6 1.74-5.3 4.16-7.8 7.21-.13.15-.22.34-.29.54-.45 1.5-.13 3.09.89 4.3.49.58 1.14 1.07 1.83 1.45.69.38 1.43.68 2.2.89v4.25c0 1.95 1.58 3.53 3.53 3.53s3.53-1.58 3.53-3.53V10.74c0-2.43-1.97-4.4-4.4-4.4S12 8.31 12 10.74v5.33c0 .35-.28.63-.63.63S10.74 16.42 10.74 16.09v-5.35c0-1.71 1.4-3.1 3.1-3.1s3.1 1.4 3.1 3.1v6.71c0 .77-.63 1.4-1.4 1.4s-1.4-.63-1.4-1.4v-3.56c0-.35-.28-.63-.63-.63s-.63.28-.63.63v3.56c0 1.53 1.25 2.78 2.78 2.78s2.78-1.25 2.78-2.78V5.04c.01-.84-.33-1.63-.92-2.22-.61-.61-1.42-.94-2.28-.94h-.01z"/></symbol></defs></svg>
+                                        <a style="width: 150px; height: 150px;" href="https://www.tiktok.com/@dc.rc3?_r=1&_t=ZM-922J2bC03fU" class="tiktok-icon-base"><svg width="150" height="150" viewBox="0 0 24 24"><use xlink:href="#tiktok-path" class="tiktok-cyan" fill="#20E3E3"/><use xlink:href="#tiktok-path" class="tiktok-magenta" fill="#FE2C55"/><use xlink:href="#tiktok-path" fill="#000000"/></svg></a>
+                                        <h3>Tiktok</h3>
+                                             </div>
+                                             <div class="lien">
+                                         <a href="image/what-QR.jpg"><img src="image/what.jpg" alt="Whatsapp" width="150" style="border-radius: 5px;" downald></a>
+                                        <h3>Whatsapp</h3>
+                                             </div>
+                                         </div>
+                                 </div>
+                                 <div id="writting" class="info">
+                                    <h3 id="h_demande">Voulez vous commenter notre prestation ?</h3>
+                                    <form action="sms.php" method="post">
+                                        <div>
+                                            <label for="mail">Entrez votre adresse email</label>
+                                            <input type="email" name="mail" id="mail" required>
+                                        </div>
+                                        <div>
+                                            <label for="pass">Entrez votre mot de passe </label>
+                                            <input type="password" name="pass" id="pass" required>
+                                        </div>
+                                        <div id="div_submit">
+                                            <input id="submit" type="submit" value="Connexion">
+                                        </div>
+                                    </form>
+                                 </div>
+                                 <div>
+                                    <p>Vous n'avez pas encore créer de compte? <br>Alors cliquer <a href="creation.php"> ici </a>pour en créer un dès maintenant"</p>
+                                 </div>
+                     </fieldset>
+                </div>
+                <div>
+                    
+                </div>
+         </main>
+         <script>
+            var mail = document.getElementById("mail");
+            var pass = document.getElementById("pass");
+            var submit = document.getElementById("submit");
+
+            submit.addEventListener("click",(e)=>{
+                if(mail.validity.valueMissing || pass.validity.valueMissing){
+                alert("VEILLEZ REMPLIR TOUTES LES CASES");
+                e.preventDefault();
+                }
+            });
+
+
+         </script>
+         <script>
+            const texteacopier =document.getElementById("MonNumero").textContent;
+            const bouton = document.getElementById("bouttonpourcopier");
+
+            bouton.addEventListener("click", async()=>
+        {
+            try{
+                await navigator.clipboard.writeText(texteacopier);
+                console.log("Texte copié avec succès");
+                bouton.textContent="Copié";
+                await setTimeout(()=>{bouton.textContent="Copier mon numero"},2000)
+            }
+            catch(err){
+                console.error("Echec de la copie :",err);
+                alert("Impossible de copier le numero");
+            }
+        
+        })
+         </script>
+         <footer>
+            <div>
+               <a href="URL_LINKDIN">LinkedIn</a> |
+               <a href="URL_GITUB">Gitub</a>  |
+               <a href="mailto:riazsanni1@gmail.com">riazsanni1@gmail.com</a>
+            </div>
+            </footer>
+    <script src="script.js"></script>   
+
+</body>
+
+</html>

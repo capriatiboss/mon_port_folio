@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="div_parent">
+         <div>
+              <input type="text" id="message">
+              <p id="para"></p>
+              <button>Cliquez</button>
+         </div>
+     </div>
+<input type="text" id="message">
+<p id="para"></p>
+<button>Cliquez</button>
+    <script type="importmap">
+        {
+            "imports":{
+                "openai":"https://esm.run/openai"
+            }
+        }
+    </script>
+    
+    <script type="module">
+        const bouton =document.querySelector("button");
+        const message = document.getElementById("message"); 
+        var para = document.getElementById("para");
+        import OpenAI from "openai";
+        const client = new OpenAI({
+            apiKey: "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",
+            baseURL: "https://api.groq.com/openai/v1",
+            dangerouslyAllowBrowser: true, 
+        });
+
+        var history_=[];
+
+        async function moi(){    
+        try{    
+        var message =document.getElementById("message").value;
+        console.log("Patientez...");
+        bouton.disabled =true;
+
+        history_.push({role:"user",content:message})
+        console.log(history_);
+        const response = await client.responses.create({
+            model: "openai/gpt-oss-20b",
+            input:JSON.stringify(history_),
+        });
+        history_.push(response.output_text);
+        console.log(history_);
+        var answer = response.output_text;
+        console.log(answer);
+        para.innerText =answer;
+        bouton.disabled =false;
+        document.getElementById("message").value ="";
+        }
+        catch(err){
+            console.error(err);
+            console.log("Il y a un problème avec votre connexion");
+            para.innerText = "Il y a un problème avec votre connexion";  
+        }
+       }
+        bouton.addEventListener("click", moi);
+    </script>
+</body>
+</html>

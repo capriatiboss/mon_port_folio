@@ -1,0 +1,240 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#div_1{
+    width: 90%;
+    padding-bottom: 20px;
+    border: 1px solid rgb(75, 142, 168);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#div_2{
+    position: relative;
+    border: 1px solid ;
+    min-height: 80px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    position:relative;
+}
+#div_comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    background-color: rgba(20, 42, 46, 0.363) ;
+    position: sticky;
+    bottom: -50px;
+    border: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 97vw;
+    margin-top: 20px;
+    padding: 15px;
+}
+#div_comments form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#new_com{
+    width: 60vw;
+    min-height: 100px;
+    border: 1px solid rgb(60, 173, 248);
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 8px;
+}
+button[type="submit"]{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(91, 91, 228);
+    color: aliceblue;
+    border: none;
+}
+.update,.delete{
+    width: auto;
+    padding: 2px;
+}
+.delete{
+    position: absolute;
+    bottom: 3px;
+    right: 65px;
+}
+.update{
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+}
+/* Cible tous les dialogues */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#div_1{
+    width: 90%;
+    padding-bottom: 20px;
+    border: 1px solid rgb(75, 142, 168);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#div_2{
+    position: relative;
+    border: 1px solid ;
+    min-height: 80px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    position:relative;
+}
+#div_comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    background-color: rgba(20, 42, 46, 0.363) ;
+    position: sticky;
+    bottom: -50px;
+    border: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 97vw;
+    margin-top: 20px;
+    padding: 15px;
+}
+#div_comments form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#new_com{
+    width: 60vw;
+    min-height: 100px;
+    border: 1px solid rgb(60, 173, 248);
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 8px;
+}
+.delete,.update{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(91, 91, 228);
+    color: aliceblue;
+    border: none;
+}
+.update,.delete{
+    width: auto;
+    padding: 2px;
+}
+.delete{
+    position: absolute;
+    bottom: 3px;
+    right: 65px;
+}
+.update{
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+}
+/* Cible tous les dialogues */
+dialog {
+    color: aliceblue;
+    margin: auto; /* Magie : centre horizontalement et verticalement */
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+dialog textarea{
+width: 100%;
+height: 100%;
+border: none;
+outline: none;
+border-radius: 15px;
+padding: 10px;
+font-style: italic;
+font-size: 1.4em;
+}
+
+dialog[open]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 90%;
+        height: 100%;
+        padding-bottom: 30px;
+        position: relative;
+
+        /*Selecteur de descendance*/
+    }
+}
+/*Les bouton et input du dialoque de modification*/
+#conf_modif{
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
+
+    border: none;
+    padding: 3px;
+    background-color: rgb(91, 91, 228);
+    border-radius: 3px;
+    color: aliceblue;
+    
+}
+#btn_anl{
+    position: absolute;
+    bottom: 2px;
+    right: 70px;
+
+    border: none;
+    padding: 3px;
+    background-color: rgb(91, 91, 228);
+    border-radius: 3px;
+    color: aliceblue;
+}
+
+
+
+/* Optionnel : fixe la largeur pour que ce soit propre */
+#dialogue, #dialogue_sup {
+    width: 90%;
+    height: 250px;
+}
+
+#suppNon,#suppOui{
+    margin-top: 20px;
+    width: 40%;
+    height: 50px;
+    background-color: rgb(91, 91, 228);
+    color: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}

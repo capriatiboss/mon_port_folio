@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            height: 100vh;
+            width: 100vh;
+            background-color: aquamarine;
+        }
+        dialog{
+            backdrop-filter: blur(2px);
+        }
+    </style>
+</head>
+<body>
+    <p>Je suis un paragraphe
+
+        none appliqué par le navigateur
+        
+        Voici les deux façons de changer cet état :
+        
+        1. Via JavaScript (Recommandé)
+        C'est la méthode que l'on utilise pour les interactions dynamiques (comme ton bouton "Modifier").
+        
+        maModale.show() : Ouvre la boîte normalement.
+        
+        maModale.showModal() : Ouvre la boîte au-dessus de tout, avec un arrière-plan (backdrop) qui bloque les interactions avec le reste de la page.
+        
+        2. Via l'attribut HTML open
+        Si tu ajoutes l'attribut directement dans le code, la boîte sera visible dès le chargement de la page :
+        
+        HTML
+    </p>
+    <button id="btn_ouverture" onclick="ouvir()">Ouvrir</button>
+    <dialog id="dialogue">
+        je suis dans la boite de dialogue
+    </dialog>
+    <script>
+        var btn = document.getElementById("btn_ouverture");
+        var dialogue = document.getElementById("dialogue");
+        function ouvir(){
+            dialogue.showModal();
+        }
+    </script>
+</body>
+</html>
