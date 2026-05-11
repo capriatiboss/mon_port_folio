@@ -1,0 +1,131 @@
+
+<main id="proj_main">
+      <section id="sec_projet1">
+          <h1 style="text-align: center;">Mes projets</h1>
+              <fieldset>
+                      <legend><h1 style="font-family: ink free; font-size: 40px; color: #DDD;">Capriati Riaz DADO</h1></legend>
+                      <div id="projet_containner">
+                          <div class="proj_div">
+                              <p class="p_p"></p>
+                              <div  class="ul_div"><h2 class="sp_ul">Programation(Bases & logiques)</h2><div style="font-size: 15px;" class="ul"><span class="fait" id="factorielle"><a href="ex_proj/factorielle.html">Factorielle</a></span><span>Générateur de mot de passe aléatoires</span><span class="fait">Convertisseur de température(°C,°F,°K)</span><span>Jeu du  Juste Prix</span><span>Analyseur de Chaine de Caractère </span><span class="fait"><a href="ex_proj/table_de_mult.html">Afficheur de table de multiplication</a></span><span>Horloge/Timer simple</span></div></div></div>
+                          <div class="proj_div">
+                              <p class="p_p"></p>
+                              <div class="ul_div"><h2 class="sp_ul">Système &  Fichers</h2><div style="font-size: 15px;" class="ul" id="ul"><span class="fait">Lecture/Ecriture Dans un Ficher Texte</span><span>Système d'Inventaire simple(CVS/JSON)</span><span>Trieur de Fichers par Extension</span><span>Visionneuse de Logs simple</span><span>Script de Backup de Dossier</span></div></div></div>
+                          <div class="proj_div">
+                              <p class="p_p"></p>
+                              <div class="ul_div"><h2 class="sp_ul">Réseau et Télécommunication</h2><div style="font-size: 15px;" class="ul"><span>Plan d'adressage  IP </span><span>Caluculateur de Masque de Sous-Réseau</span><span>Configuration de deux VM en réseau</span><span>Serveur Web Statique sur VM en réseau </span><span>Testeur de Port</span><span>Analyseur d'URL(Python)</span><span>Script de Diagnostic de Carte Réseau</span></div></div></div>
+                          <div class="proj_div">
+                              <p class="p_p"></p>
+                              <div class="ul_div"><h2 class="sp_ul">Initiation au Web et Interfaces</h2><div style="font-size: 15px;" class="ul"><span class="fait">Page Web Personnelle (HTML/CSS)</span><span class="fait">Formulaire d'inscription HTML simple</span><span>Scraping de Prix(avec Python)</span><span class="fait"><a href="ex_proj/open-ai-text.html" target="_blank"> Météo Intelligente de commande (API)</a></span><span class="fait">Interface Graphique pour Calculatrice</span></div></div></div>
+                      </div>
+                      <p style="display: none;" id="parainvisible">
+                          <svg width="55" height="20" viewBox="0 0 55 20" xmlns="http://www.w3.org/2000/svg">
+                              <style>
+                                .dot {
+                                  animation: pulse 1.5s infinite ease-in-out;
+                                }
+                                .dot:nth-child(2) { animation-delay: 0.2s; }
+                                .dot:nth-child(3) { animation-delay: 0.4s; }
+                            
+                                @keyframes pulse {
+                                  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+                                  50% { opacity: 1; transform: scale(1.2); }
+                                }
+                              </style>
+                            
+                              <rect width="55" height="20" rx="10" fill="#f0f2f5"/>
+                            
+                              <circle class="dot" cx="18" cy="10" r="3" fill="#6366f1"/>
+                              <circle class="dot" cx="27.5" cy="10" r="3" fill="#8b5cf6"/>
+                              <circle class="dot" cx="37" cy="10" r="3" fill="#a855f7"/>
+                            </svg>
+                            
+                            
+                      </p>  
+                      <p id="parainvisible2" style="display: none;">
+                          <svg width="55" height="20" viewBox="0 0 55 20" xmlns="http://www.w3.org/2000/svg">
+                              <style>
+                                /* L'onde qui s'élargit à l'infini */
+                                .wave {
+                                  transform-origin: 27.5px 10px;
+                                  animation: ripple 1.5s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+                            
+                                /* Le cœur de l'icône qui pulse */
+                                .core {
+                                  transform-origin: 27.5px 10px;
+                                  animation: heartBeat 1.5s infinite ease-in-out;
+                                }
+                            
+                                @keyframes ripple {
+                                  0% { transform: scale(0.8); opacity: 1; stroke-width: 2; }
+                                  100% { transform: scale(2.5); opacity: 0; stroke-width: 0.5; }
+                                }
+                            
+                                @keyframes heartBeat {
+                                  0%, 100% { transform: scale(1); }
+                                  50% { transform: scale(1.15); }
+                                }
+                              </style>
+                            
+                              <rect width="55" height="20" rx="10" fill="#1e293b"/>
+                            
+                              <circle class="wave" cx="27.5" cy="10" r="6" fill="none" stroke="#38bdf8" />
+                            
+                              <g class="core">
+                                <circle cx="27.5" cy="10" r="7" fill="#38bdf8"/>
+                                <path d="M24 10.5 L26.5 13 L31 8.5" 
+                                      fill="none" 
+                                      stroke="#1e293b" 
+                                      stroke-width="2" 
+                                      stroke-linecap="round" 
+                                      stroke-linejoin="round"/>
+                              </g>
+                            </svg>
+                      </p>
+                      <script>
+                      var mesdivs = document.querySelectorAll(".ul"); 
+                      var  parainvisible = document.getElementById("parainvisible").innerHTML;
+                      var parainvisible2 = document.getElementById("parainvisible2").innerHTML;
+                      mesdivs.forEach((madiv,indexdiv)=>{
+                          var messpans=madiv.querySelectorAll("span");
+                          console.log("Reussi");
+                          messpans.forEach((monspan,indexspan)=>{
+                              //monspan.style.backgroundColor="blue";
+                              console.log(indexdiv+"-"+indexspan);
+                              monspan.classList.add("span_js");
+                              console.log(monspan.classList.contains("fait"));
+                            //creation de p et ajout de la classe spanscript
+                              var spanscript= document.createElement("p");
+                              monspan.appendChild(spanscript);
+                              spanscript.classList.add("spanscript");
+
+                              if(monspan.classList.contains("fait")){
+                              spanscript.innerHTML=parainvisible2;
+                              console.log("Reussiii");
+                              }
+                              else{
+                              spanscript.innerHTML=parainvisible;
+                              }
+
+                              var logo = document.createElement("div");
+                              spanscript.appendChild(logo);
+                              logo.classList.add("logo");
+                              logo.innerHTML="Reusii";
+
+                              if(monspan.classList.contains("fait")){
+                              logo.innerHTML="Fait";
+                              }
+                              else{
+                              logo.innerHTML="En cours";
+                              }
+                              
+                              console.log(spanscript.classList.contains("spanscript"));
+                              
+                          })
+                      })
+                      </script>  
+                      <script src="script.js"></script>
+              </fieldset>
+      </section>
+  </main>

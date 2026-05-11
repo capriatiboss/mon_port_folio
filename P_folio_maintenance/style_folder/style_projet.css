@@ -1,0 +1,131 @@
+#proj_main a{
+     color: aliceblue;
+}
+#sec_projet1{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    border-radius: 10px;
+    border: 5px outset #110254;
+   }
+
+#projet_containner{
+    width: 98%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 500px);
+    gap: 50px;
+}
+.proj_div{
+    padding:10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-bottom: 10px;
+
+    
+}
+.proj_div:hover{
+    box-shadow: 4px 5px 6px black;
+}
+
+.p_p{
+    font-family: ink free;
+    font-size: 30px;
+    text-align: center;
+    transform: translateY();
+}
+.ul_div{
+    list-style: none;
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.sp_ul{
+font-size: 30px;
+text-decoration: underline;
+text-align: center;
+border-radius: 10px;
+border: 2px solid rgb(139, 167, 243);
+font-style: italic;
+box-shadow: 2px 2px 2px black;
+padding: 5px;
+}
+
+.proj_div:hover .ul_div{
+    transform: translateX(0);
+    opacity: 1;
+
+}
+
+#projet_containner .ul{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    justify-content: center;
+    span{
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        width: 20%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        border: 2px solid rgba(204, 199, 191, 0.842);
+         border-radius: 7px;
+         height: 130px;
+         padding: 10px;
+         background:linear-gradient(rgb(53, 73, 95),rgb(45, 88, 180));
+}
+}
+
+/*Contenue js*/
+.spanscript{
+    width: 65px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    min-width:50px;
+    position:absolute;
+    top: 4px;
+    right: 4px;
+    display: grid;
+    border-radius: 3px;
+    padding: 1px;
+    overflow: hidden;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    transform: translateY(100%);
+    font-weight: normal;
+    width: 100%;
+    background-color: rgb(12, 25, 39);
+    position: absolute;
+    color:wheat;
+    transition: transform 0.2s; 
+}
+
+.span_js:hover  .logo{
+   transform: translateY(0); 
+}
+a{
+    text-decoration: none;
+}
